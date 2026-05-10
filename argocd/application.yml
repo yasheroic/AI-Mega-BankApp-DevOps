@@ -3,19 +3,30 @@ kind: Application
 metadata:
   name: bankapp
   namespace: argocd
+
 spec:
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      jsonPointers:
+        - /spec/replicas
+
   project: default
+
   source:
     repoURL: https://github.com/yasheroic/AI-Mega-BankApp-DevOps.git
     targetRevision: main
     path: k8s
+
   destination:
     server: https://kubernetes.default.svc
     namespace: bankapp
+
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+
     syncOptions:
       - CreateNamespace=true
       - ServerSideApply=true
