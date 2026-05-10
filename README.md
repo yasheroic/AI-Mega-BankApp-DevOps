@@ -152,9 +152,3 @@ Code Push → GitHub Actions → Build & Push to DockerHub → Update k8s manife
 **DevOps:** Terraform, GitHub Actions, ArgoCD, Envoy Gateway, cert-manager, kube-prometheus-stack
 
 ---
-
-<div align="center">
-
-**TrainWithShubham** — Happy Learning
-
-</div>
