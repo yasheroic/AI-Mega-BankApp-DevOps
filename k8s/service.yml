@@ -3,8 +3,6 @@ kind: Service
 metadata:
   name: mysql-service
   namespace: bankapp
-  annotations:
-    argocd.argoproj.io/sync-wave: "0"
 spec:
   selector:
     app: mysql
